@@ -5,7 +5,7 @@ jobs:
   gcc:
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork
     name: "Build Hyprland (Arch)"
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     container:
       image: archlinux
     steps:
@@ -45,7 +45,7 @@ jobs:
     permissions: read-all
     if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork
     name: "Code Style"
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     container:
       image: archlinux
     steps:
